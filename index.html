@@ -1,55 +1,57 @@
-
-<!doctype html>
-<html>
-<head>
-<!-- Adding in the Leaflet CSS file -->
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-<!--[if lte IE 8]>
-     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
-<![endif]-->
-
-<!-- Adding Leaflet JavaScript file -->
-<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
-
-<!-- Adding styling info for the map -->
-<style type="text/css">
-#map { height: 600px; }
-</style>
-
-</head>
-
-<body>
-
-  <!-- Creating the map div -->
-  <div id="map"></div>
-
-  <!-- The JavaScript that's powering the map -->
-  <script>
-
-  // Initialize the map
-  var map = L.map('map').setView([37.80151060070086, -122.25809097290039], 8);
-
-  // Add tiles
-  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
-  // Add a marker
-  var marker = L.marker([37.806139045209385, -122.27156907320024]).addTo(map);
-
-  // Add a popup to the marker
-  marker.bindPopup("Work");
-  
-  var marker = L.marker([37.775135225189295, -122.22467601299287]).addTo(map);
-
-  // Add a popup to the marker
-  marker.bindPopup("Fruitvale BART");
-  
-  var marker = L.marker([37.78948249440369, -122.21619486808777).addTo(map);
-
-  // Add a popup to the marker
-  marker.bindPopup("Home");
-
-  </script>
-</body>
-</html>
+var data = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.81371879577635,
+          39.52973133987831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.81816053390504,
+          39.529135530748114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.81648683547974,
+          39.524137152814056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.81037139892577,
+          39.526470877354704
+        ]
+      }
+    }
+  ]
+}
